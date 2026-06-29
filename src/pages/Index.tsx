@@ -1,10 +1,10 @@
 import Icon from '@/components/ui/icon';
 
-const MASCOT = 'https://cdn.poehali.dev/projects/32199fa2-bc3e-4c42-921e-946c43d8385a/files/72e72d5b-fc6d-4e81-952a-ccae9c5d0728.jpg';
+const MASCOT = 'https://cdn.poehali.dev/projects/32199fa2-bc3e-4c42-921e-946c43d8385a/bucket/151565cd-09fa-4830-847f-d3f45e952b28.jpg';
 
-const Balloon = ({ color, className, delay }: { color: string; className: string; delay: string }) => (
-  <div className={`absolute ${className}`} style={{ animationDelay: delay }}>
-    <div className="relative animate-float-slow" style={{ animationDelay: delay }}>
+const Balloon = ({ color, className }: { color: string; className: string }) => (
+  <div className={`absolute ${className}`}>
+    <div className="relative">
       <div
         className="w-14 h-[68px] rounded-full shadow-lg"
         style={{ background: `radial-gradient(circle at 32% 28%, rgba(255,255,255,0.65), ${color} 60%)` }}
@@ -45,35 +45,31 @@ const Index = () => {
         ].map((c, i) => (
           <span
             key={i}
-            className={`absolute w-2.5 h-2.5 rounded-full opacity-80 animate-float ${c}`}
-            style={{ animationDelay: `${i * 0.4}s` }}
+            className={`absolute w-2.5 h-2.5 rounded-full opacity-80 ${c}`}
           />
         ))}
 
-        {/* Floating balloons */}
-        <Balloon color="#ff7a59" className="top-6 left-5" delay="0s" />
-        <Balloon color="#ffd84d" className="top-2 right-6" delay="1.2s" />
-        <Balloon color="#ffffff" className="top-24 right-2 scale-75" delay="0.6s" />
+        {/* Balloons */}
+        <Balloon color="#ff7a59" className="top-6 left-5" />
+        <Balloon color="#ffd84d" className="top-2 right-6" />
+        <Balloon color="#ffffff" className="top-24 right-2 scale-75" />
 
         {/* Content */}
         <div className="relative h-full flex flex-col items-center text-center px-7 py-10">
-          <p className="mt-4 text-white/85 tracking-[0.35em] text-xs font-semibold uppercase animate-fade-up">
+          <p className="mt-4 text-white/85 tracking-[0.35em] text-xs font-semibold uppercase">
             Приглашение
           </p>
-          <p className="mt-2 text-white/90 text-base font-medium animate-fade-up" style={{ animationDelay: '0.1s' }}>
+          <p className="mt-2 text-white/90 text-base font-medium">
             на День Рождения
           </p>
 
           {/* Name */}
-          <h1
-            className="mt-3 font-display text-[#fff3d6] text-6xl leading-none drop-shadow-[0_4px_0_rgba(0,0,0,0.12)] animate-pop-in"
-            style={{ animationDelay: '0.2s' }}
-          >
+          <h1 className="mt-3 font-display text-[#fff3d6] text-6xl leading-none drop-shadow-[0_4px_0_rgba(0,0,0,0.12)]">
             Виктор
           </h1>
 
           {/* Age badge */}
-          <div className="mt-4 animate-pop-in" style={{ animationDelay: '0.4s' }}>
+          <div className="mt-4">
             <div className="relative inline-flex items-center justify-center">
               <span className="absolute inset-0 rounded-full bg-[#ffd84d] blur-md opacity-60" />
               <span className="relative flex items-center gap-1 bg-[#ffd84d] text-[#15808f] font-extrabold text-2xl px-6 py-2 rounded-full shadow-lg">
@@ -83,21 +79,18 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Mascot */}
-          <div className="relative mt-3 animate-fade-up" style={{ animationDelay: '0.5s' }}>
+          {/* Photo */}
+          <div className="relative mt-3">
             <div className="absolute inset-0 rounded-full bg-white/15 blur-xl" />
             <img
               src={MASCOT}
-              alt="Праздничный персонаж"
-              className="relative w-40 h-40 object-cover rounded-full border-4 border-white/70 shadow-xl animate-float"
+              alt="Виктор"
+              className="relative w-40 h-40 object-cover rounded-full border-4 border-white/70 shadow-xl"
             />
           </div>
 
           {/* Details card */}
-          <div
-            className="mt-auto w-full bg-white/95 backdrop-blur rounded-3xl p-5 shadow-2xl animate-fade-up"
-            style={{ animationDelay: '0.65s' }}
-          >
+          <div className="mt-auto w-full bg-white/95 backdrop-blur rounded-3xl p-5 shadow-2xl">
             <div className="space-y-3">
               {details.map((d) => (
                 <div key={d.label} className="flex items-center gap-3 text-left">
@@ -121,7 +114,7 @@ const Index = () => {
             </div>
           </div>
 
-          <p className="mt-4 text-white/80 text-sm font-medium animate-fade-up" style={{ animationDelay: '0.8s' }}>
+          <p className="mt-4 text-white/80 text-sm font-medium">
             Будет весело — ждём тебя! 🎉
           </p>
         </div>
