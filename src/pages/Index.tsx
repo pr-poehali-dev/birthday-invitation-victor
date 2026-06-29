@@ -1,6 +1,6 @@
 import Icon from '@/components/ui/icon';
 
-const MASCOT = 'https://cdn.poehali.dev/projects/32199fa2-bc3e-4c42-921e-946c43d8385a/bucket/151565cd-09fa-4830-847f-d3f45e952b28.jpg';
+const MASCOT = 'https://cdn.poehali.dev/projects/32199fa2-bc3e-4c42-921e-946c43d8385a/bucket/1a337872-cc0a-4e45-9e02-b17feafaac19.jpg';
 
 const Balloon = ({ color, className }: { color: string; className: string }) => (
   <div className={`absolute ${className}`}>
@@ -80,12 +80,12 @@ const Index = () => {
           </div>
 
           {/* Photo */}
-          <div className="relative mt-3 w-44 h-52">
-            <div className="absolute inset-0 rounded-[2rem] bg-white/10 blur-xl" />
+          <div className="relative mt-3">
+            <div className="absolute inset-0 rounded-full bg-white/15 blur-xl" />
             <img
               src={MASCOT}
               alt="Виктор"
-              className="relative w-full h-full object-cover object-[center_15%] rounded-[2rem] border-4 border-white/70 shadow-2xl"
+              className="relative w-40 h-40 object-cover object-[center_20%] rounded-full border-4 border-white/70 shadow-xl"
             />
           </div>
 
