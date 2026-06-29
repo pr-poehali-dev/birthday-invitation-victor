@@ -80,12 +80,12 @@ const Index = () => {
           </div>
 
           {/* Photo */}
-          <div className="relative mt-3">
-            <div className="absolute inset-0 rounded-full bg-white/15 blur-xl" />
+          <div className="relative mt-3 w-44 h-52">
+            <div className="absolute inset-0 rounded-[2rem] bg-white/10 blur-xl" />
             <img
               src={MASCOT}
               alt="Виктор"
-              className="relative w-40 h-40 object-cover rounded-full border-4 border-white/70 shadow-xl"
+              className="relative w-full h-full object-cover object-[center_15%] rounded-[2rem] border-4 border-white/70 shadow-2xl"
             />
           </div>
 
